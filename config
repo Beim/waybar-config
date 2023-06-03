@@ -11,7 +11,7 @@
     // "modules-center": ["sway/window"],
     "modules-center": ["clock"],
     // "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "tray"],
+    "modules-right": [ "pulseaudio", "battery", "tray" ],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -48,13 +48,14 @@
     "battery": {
         // "bat": "BAT0",
         "states": {
+            "full": 100,
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
@@ -65,9 +66,10 @@
     },
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "{volume}% {icon}",
+        // "format": "{volume}% {icon}",
+        "format": "{icon}",
         // "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth": "{icon}",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
